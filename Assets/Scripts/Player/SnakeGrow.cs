@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class SnakeGrow : MonoBehaviour
         {
             RemoveFood(other.gameObject);
             snakeTail.AddTail();
+            
         }
     }
 
