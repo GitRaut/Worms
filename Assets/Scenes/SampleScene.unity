@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 110806235}
   - component: {fileID: 110806234}
-  - component: {fileID: 110806233}
+  - component: {fileID: 110806236}
   - component: {fileID: 110806232}
   m_Layer: 0
   m_Name: Capsule (1)
@@ -177,18 +177,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.99999994, y: 2}
   m_Direction: 0
---- !u!114 &110806233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110806231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728d2d58dbc82ea44b8ab3b1152b4617, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &110806234
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -256,6 +244,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &110806236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110806231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6fc6accc3ce5b43b016f3eec8435d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1232841735}
   - component: {fileID: 1232841734}
-  - component: {fileID: 1232841733}
+  - component: {fileID: 1232841736}
   - component: {fileID: 1232841732}
   m_Layer: 0
   m_Name: Capsule
@@ -681,18 +681,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.99999994, y: 2}
   m_Direction: 0
---- !u!114 &1232841733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232841731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728d2d58dbc82ea44b8ab3b1152b4617, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1232841734
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -760,6 +748,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1232841736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232841731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6fc6accc3ce5b43b016f3eec8435d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1311143426
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,7 +941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1346241772}
   - component: {fileID: 1346241771}
-  - component: {fileID: 1346241770}
+  - component: {fileID: 1346241773}
   - component: {fileID: 1346241769}
   m_Layer: 0
   m_Name: Capsule (2)
@@ -985,18 +985,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.99999994, y: 2}
   m_Direction: 0
---- !u!114 &1346241770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346241768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728d2d58dbc82ea44b8ab3b1152b4617, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1346241771
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1064,6 +1052,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.183}
+--- !u!114 &1346241773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346241768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6fc6accc3ce5b43b016f3eec8435d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1570309324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,6 +1073,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1570309325}
+  - component: {fileID: 1570309327}
   - component: {fileID: 1570309326}
   m_Layer: 0
   m_Name: SnakeTrailGfx
@@ -1148,6 +1149,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1570309327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570309324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95dd8f56b3db9a447ac9f7944929d8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Food: {fileID: 9133443265005041661, guid: 0a51fb80e18930c439426133c982b57b, type: 3}
 --- !u!1 &1756764077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,7 +1256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812995363}
   - component: {fileID: 1812995362}
-  - component: {fileID: 1812995361}
+  - component: {fileID: 1812995364}
   - component: {fileID: 1812995360}
   m_Layer: 0
   m_Name: Capsule (3)
@@ -1286,18 +1300,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.99999994, y: 2}
   m_Direction: 0
---- !u!114 &1812995361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812995359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728d2d58dbc82ea44b8ab3b1152b4617, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1812995362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1365,6 +1367,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.183}
+--- !u!114 &1812995364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812995359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6fc6accc3ce5b43b016f3eec8435d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2041639571
 GameObject:
   m_ObjectHideFlags: 0
