@@ -15,10 +15,9 @@ public class SnakeGrow : MonoBehaviour
         {
             RemoveFood(other.gameObject);
             snakeTail.AddTail();
+
             transform.localScale += new Vector3(scaleAmount, scaleAmount, scaleAmount);
             Debug.Log("Объект увеличился");
-
-            
         }
 
     }

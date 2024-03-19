@@ -6,5 +6,10 @@ public class CameraFollow : MonoBehaviour
 {
     [SerializeField] private Transform target;
 
-    private void FixedUpdate() => transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+    private void FixedUpdate()
+    {
+        if (!target) return;
+
+        transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+    }
 }
