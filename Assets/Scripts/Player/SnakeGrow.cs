@@ -14,7 +14,6 @@ public class SnakeGrow : MonoBehaviour
         {
             RemoveFood(other.gameObject);
             snakeTail.AddTail();
-            
         }
     }
 
