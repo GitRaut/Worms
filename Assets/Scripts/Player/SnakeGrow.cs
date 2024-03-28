@@ -19,7 +19,7 @@ public class SnakeGrow : MonoBehaviour
 
     private void RemoveFood(GameObject food)
     {
-        FoodGenerator.instance.RemoveFood(food);
+        PlayerData.instance.FoodGenerator.RemoveFood(food);
         Destroy(food, 0.02f);
     }
 }

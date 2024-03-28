@@ -14,14 +14,10 @@ public class FoodGenerator : MonoBehaviour
     [SerializeField] private List<GameObject> foodPrefabs;
     [SerializeField] private float breakTime;
 
-    private List<SnakeGrow> players;
     private List<GameObject> createdFood = new List<GameObject>();
-
-    public static FoodGenerator instance;
 
     private void Awake()
     {
-        instance = this;
         StartCoroutine(GenerateFood());
     }
 
