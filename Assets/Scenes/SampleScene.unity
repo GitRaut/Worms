@@ -407,6 +407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2121324143}
+  speed: 0.1
+  zoomScale: 0
+  zoomSpeed: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,12 +623,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 20
-  density: 500
+  density: 1000
   fieldColor: {r: 1, g: 0, b: 0, a: 0}
   foodContainer: {fileID: 2041639572}
   foodPrefabs:
   - {fileID: 9133443265005041661, guid: e48b658cb89ad8d4faeff0991a660934, type: 3}
-  breakTime: 1
+  breakTime: 0.5
 --- !u!114 &1223447391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,7 +638,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1223447388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98eaebb5890918c478657311d06cf2e0, type: 3}
+  m_Script: {fileID: 11500000, guid: d5a0d6563030bfb49b08d09d6f366785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1232841731
@@ -1433,7 +1436,6 @@ GameObject:
   - component: {fileID: 2121324142}
   - component: {fileID: 2121324141}
   - component: {fileID: 2121324140}
-  - component: {fileID: 2121324145}
   - component: {fileID: 2121324144}
   - component: {fileID: 2121324139}
   m_Layer: 0
@@ -1565,18 +1567,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2121324145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121324138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5345607349dc3b440a2b0b1d3b0faf50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

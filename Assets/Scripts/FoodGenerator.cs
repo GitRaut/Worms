@@ -5,21 +5,18 @@ using UnityEngine;
 public class FoodGenerator : MonoBehaviour
 {
     [Header("Field")]
-    [SerializeField] private float radius;
-    [SerializeField] private int density;
-    [SerializeField] private Color fieldColor;
-    [SerializeField] private Transform foodContainer;
+    [SerializeField] private float radius; //radius of generate zone
+    [SerializeField] private int density; //max count of food in generate zone
+    [SerializeField] private Color fieldColor; //color if gizmos circle
+    [SerializeField] private Transform foodContainer; //transform with all food
 
     [Header("Food")]
-    [SerializeField] private List<GameObject> foodPrefabs;
-    [SerializeField] private float breakTime;
+    [SerializeField] private List<GameObject> foodPrefabs; 
+    [SerializeField] private float breakTime; //time between generations
 
-    private List<GameObject> createdFood = new List<GameObject>();
+    private List<GameObject> createdFood = new List<GameObject>(); //list with all generated food
 
-    private void Awake()
-    {
-        StartCoroutine(GenerateFood());
-    }
+    private void Start() => StartCoroutine(GenerateFood());
 
     private IEnumerator GenerateFood()
     {
@@ -30,20 +27,9 @@ public class FoodGenerator : MonoBehaviour
             Vector3 pos = Random.insideUnitCircle * radius;
             GameObject foodPref = foodPrefabs[Random.Range(0, foodPrefabs.Count)];
             GameObject food = Instantiate(foodPref, pos, Quaternion.identity, foodContainer);
-            AddFood(food);
         }
 
         StartCoroutine(GenerateFood());
-    }
-
-    public void AddFood(GameObject food)
-    {
-        if(!createdFood.Contains(food)) createdFood.Add(food);  
-    }
-
-    public void RemoveFood(GameObject food)
-    {
-        if (createdFood.Contains(food)) createdFood.Remove(food);
     }
 
     private void OnDrawGizmos()
