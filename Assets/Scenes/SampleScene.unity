@@ -1171,6 +1171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1756764078}
+  - component: {fileID: 1756764080}
   - component: {fileID: 1756764079}
   m_Layer: 0
   m_Name: SnakeHeadGfx
@@ -1246,6 +1247,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1756764080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756764077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1eb73134ce4e3447b19fa7091bfca9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1812995359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,10 +1433,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2121324143}
+  - component: {fileID: 2121324148}
+  - component: {fileID: 2121324147}
   - component: {fileID: 2121324142}
   - component: {fileID: 2121324141}
   - component: {fileID: 2121324140}
-  - component: {fileID: 2121324145}
+  - component: {fileID: 2121324146}
   - component: {fileID: 2121324144}
   - component: {fileID: 2121324139}
   m_Layer: 0
@@ -1554,7 +1570,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2121324145
+--- !u!114 &2121324146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1563,10 +1579,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 2121324138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5345607349dc3b440a2b0b1d3b0faf50, type: 3}
+  m_Script: {fileID: 11500000, guid: d1eb73134ce4e3447b19fa7091bfca9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleAmount: 0.01
+  speed: 5
+--- !u!114 &2121324147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121324138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bdd3e52bc012a44b4509f3e04213dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Snake: {fileID: 2121324143}
+  Food:
+  - {fileID: 6523158590572128379, guid: e48b658cb89ad8d4faeff0991a660934, type: 3}
+  - {fileID: 6523158590572128379, guid: 0a51fb80e18930c439426133c982b57b, type: 3}
+  - {fileID: 6523158590572128379, guid: eca1665ff75f95449977f01c6f35f2f8, type: 3}
+--- !u!114 &2121324148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121324138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1eb73134ce4e3447b19fa7091bfca9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
