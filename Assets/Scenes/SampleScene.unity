@@ -1493,6 +1493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeTail: {fileID: 2121324141}
+  scaleAmount: 0.01
 --- !u!114 &2121324141
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ using UnityEngine;
 public class SnakeGrow : MonoBehaviour
 {
      [SerializeField] private SnakeTail snakeTail;
+     public float scaleAmount = 0.1f; // Количество, на которое увеличивается объект при соприкосновении с едой
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,9 +15,12 @@ public class SnakeGrow : MonoBehaviour
         {
             RemoveFood(other.gameObject);
             snakeTail.AddTail();
-        }
-    }
 
+            transform.localScale += new Vector3(scaleAmount, scaleAmount, scaleAmount);
+            Debug.Log("Объект увеличился");
+        }
+
+    }
     private void RemoveFood(GameObject food)
     {
         PlayerData.instance.FoodGenerator.RemoveFood(food);
