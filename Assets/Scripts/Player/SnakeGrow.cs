@@ -7,7 +7,7 @@ using UnityEngine;
 public class SnakeGrow : MonoBehaviour
 {
      [SerializeField] private SnakeTail snakeTail;
-     public float scaleAmount = 0.1f; // Количество, на которое увеличивается объект при соприкосновении с едой
+     public float scaleAmount = 0.1f; // The amount by which an object increases when it comes into contact with food
 
     private void OnTriggerEnter2D(Collider2D other)
     {
