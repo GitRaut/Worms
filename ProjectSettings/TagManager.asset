@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Food
   - Snake
+  - AI
   layers:
   - Default
   - TransparentFX
