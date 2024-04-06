@@ -9,7 +9,7 @@ public class SnakeGrow : MonoBehaviour
     {
         if (other.CompareTag("Food"))
         {
-            Destroy(other, 0.02f);
+            Destroy(other.gameObject);
             Grow(other.gameObject);
         }
     }
@@ -19,6 +19,6 @@ public class SnakeGrow : MonoBehaviour
         snakeTail.AddTail();
         transform.localScale += Vector3.one * scaleAmount;
 
-        EventManager.CallOnGameStateUpdate("EatFood");
+        EventManager.CallState("EatFood");
     }
 }
