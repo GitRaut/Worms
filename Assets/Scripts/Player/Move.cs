@@ -5,6 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;
+    [SerializeField] private float boostedSpeed = 6f; // Double speed
 
     Vector3 direction;
 
@@ -15,9 +16,8 @@ public class Move : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = Vector2.MoveTowards(transform.position, direction, speed * Time.deltaTime);
-        //transform.(Vector2.up * speed * Time.fixedDeltaTime, Space.Self);
-        //transform.Rotate(direction * rotationSpeed * Time.fixedDeltaTime);
+        float currentSpeed = Input.GetKey(KeyCode.Space) ? boostedSpeed : speed; // Increase speed while holding down the left button
+
+        transform.position = Vector2.MoveTowards(transform.position, direction, currentSpeed * Time.deltaTime);
     }
- 
 }
