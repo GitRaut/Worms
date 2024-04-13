@@ -19,6 +19,7 @@ public class SnakeGrow : MonoBehaviour
         snakeTail.AddTail();
         transform.localScale += Vector3.one * scaleAmount;
 
-        EventManager.CallState("EatFood");
+        if(transform.CompareTag("Snake"))
+            EventManager.CallState("EatFood");
     }
 }
