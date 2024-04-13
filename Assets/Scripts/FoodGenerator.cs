@@ -27,6 +27,7 @@ public class FoodGenerator : MonoBehaviour
             Vector3 pos = Random.insideUnitCircle * radius;
             GameObject foodPref = foodPrefabs[Random.Range(0, foodPrefabs.Count)];
             GameObject food = Instantiate(foodPref, pos, Quaternion.identity, foodContainer);
+            EventManager.CallState("foodGenerated");
         }
 
         StartCoroutine(GenerateFood());

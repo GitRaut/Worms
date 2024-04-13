@@ -15,6 +15,13 @@ public class StateManager : MonoBehaviour
         switch (incident) 
         {
             case "EatFood":
+
+                break;
+            case "Death":
+                              
+                break;
+            case "foodGenerated":
+                
                 break;
         }
     }
