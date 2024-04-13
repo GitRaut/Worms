@@ -15,10 +15,7 @@ public class CameraFollow : MonoBehaviour
     private Vector3 targetPos;
     private Vector3 change;
 
-    private void Start()
-    {
-        mainCam = Camera.main;
-    }
+    private void Start() => mainCam = Camera.main;
 
     private void FixedUpdate()
     {

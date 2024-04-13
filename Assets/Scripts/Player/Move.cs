@@ -7,12 +7,9 @@ public class Move : MonoBehaviour
     [SerializeField] private float speed = 3f;
     [SerializeField] private float boostedSpeed = 6f; // Double speed
 
-    Vector3 direction;
+    private Vector3 direction;
 
-    private void Update()
-    {
-        direction = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    }
+    private void Update() => direction = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
     private void FixedUpdate()
     {

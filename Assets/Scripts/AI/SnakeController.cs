@@ -4,31 +4,20 @@ using UnityEngine;
 
 public class SnakeController : MonoBehaviour
 {
-    public float speed = 5f;
-    private Transform target;
+    [SerializeField] private float speed = 5f;
 
-    void Start()
-    {
-        target = null;
-    }
+    private Transform target = null;
+    private Vector3 direction = Vector3.right;
 
     void Update()
     {
-        if (target != null)
+        if (target && Vector3.Distance(transform.position, target.position) < 0.1f)
         {
-            Vector3 direction = target.position - transform.position;
-            transform.Translate(direction.normalized * speed * Time.deltaTime);
+            Destroy(target.gameObject);
+            target = null;
+        }
 
-            if (Vector3.Distance(transform.position, target.position) < 0.1f)
-            {
-                Destroy(target.gameObject);
-                target = null;
-            }
-        }
-        else
-        {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
-        }
+        transform.Translate(direction.normalized * speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -36,6 +25,7 @@ public class SnakeController : MonoBehaviour
         if (other.CompareTag("Food"))
         {
             target = other.transform;
+            direction = target.position - transform.position;
         }
     }
 }
