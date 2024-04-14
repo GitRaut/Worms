@@ -1,11 +1,27 @@
 using UnityEngine;
 
+public enum BonusType
+{
+    RandomSize,
+    Boost,
+    Magnet,
+    SizeBoost,
+    Zoom
+}
+
 public class Bonus : MonoBehaviour
 {
-    [SerializeField] private int influence; //in procentage
-    [SerializeField] private float existTime; //existing time
+    [SerializeField] protected int influence; //in procentage
+    [SerializeField] protected float existTime; //existing time
+    [SerializeField] protected BonusType type;
 
-    private void OnTriggerEnter2D(Collider2D collision) => DoAction();
+    public BonusType bonusType 
+    { 
+        get { return type; } 
+        private set { type = value; }
+    }
 
-    protected virtual void DoAction() { }
+    private void OnTriggerEnter2D(Collider2D collision) => DoAction(collision.gameObject);
+
+    protected virtual void DoAction(GameObject obj) { }
 }

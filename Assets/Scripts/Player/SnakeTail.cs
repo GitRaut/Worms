@@ -14,6 +14,8 @@ public class SnakeTail : MonoBehaviour
     private List<Transform> snakeTail = new List<Transform>();
     private List<Vector2> positions = new List<Vector2>();
 
+    private int order = 0;
+
     private void Start()
     {
         positions.Add(SnakeTailGfx.position);
@@ -42,6 +44,9 @@ public class SnakeTail : MonoBehaviour
         Transform tail = Instantiate(SnakeTailGfx, positions[positions.Count - 1], Quaternion.identity, transform);
         snakeTail.Add(tail);
         positions.Add(tail.position);
-    }
+
+        order -= 1;
+        tail.gameObject.GetComponent<SpriteRenderer>().sortingOrder = order;
+     }
 
 }

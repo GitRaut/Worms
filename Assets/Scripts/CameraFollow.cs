@@ -31,4 +31,5 @@ public class CameraFollow : MonoBehaviour
     }
 
     public void Zoom() => mainCam.orthographicSize = Mathf.Lerp(mainCam.orthographicSize, mainCam.orthographicSize + zoomScale, zoomSpeed);
+    public void ReZoom() => mainCam.orthographicSize = Mathf.Lerp(mainCam.orthographicSize, mainCam.orthographicSize - zoomScale, zoomSpeed);
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour
@@ -8,13 +6,23 @@ public class Move : MonoBehaviour
     [SerializeField] private float boostedSpeed = 6f; // Double speed
 
     private Vector3 direction;
+    private float curSpeed;
+
+    private bool isBoosted = false;//is bonus boosted
+
+    private void Start() => curSpeed = speed;
 
     private void Update() => direction = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
     private void FixedUpdate()
     {
-        float currentSpeed = Input.GetKey(KeyCode.Space) ? boostedSpeed : speed; // Increase speed while holding down the left button
+        if(isBoosted || Input.GetKeyDown(KeyCode.Space)) curSpeed = boostedSpeed;
+        else if (!isBoosted || Input.GetKeyUp(KeyCode.Space)) curSpeed = speed;
 
-        transform.position = Vector2.MoveTowards(transform.position, direction, currentSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, direction, curSpeed * Time.deltaTime);
     }
+
+    public void Boost() => isBoosted = true;
+
+    public void ReBoost() => isBoosted = false;
 }

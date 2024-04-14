@@ -294,13 +294,14 @@ GameObject:
   - component: {fileID: 371567265}
   - component: {fileID: 371567264}
   - component: {fileID: 371567271}
+  - component: {fileID: 371567273}
   m_Layer: 0
   m_Name: AI
   m_TagString: AI
   m_Icon: {fileID: 2800000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &371567264
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -375,7 +376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503514e7a97f02b448bb9f47a9153161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snakeTail: {fileID: 371567267}
   scaleAmount: 0.01
 --- !u!114 &371567267
 MonoBehaviour:
@@ -458,6 +458,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+--- !u!114 &371567273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371567263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc67740890b6474bb2f6a7446e3bc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  boostedSpeed: 6
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +699,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000c5facaa4
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -963,9 +977,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingLayerID: -1530201403
+  m_SortingLayer: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.4811321, g: 0.31092027, b: 0.31092027, a: 1}
   m_FlipX: 0
@@ -1727,7 +1741,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 869d2ab4aaa74e24b95f7f9f998266c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 14985a16732235e4dabaef4cfc435c68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1824,7 +1838,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 869d2ab4aaa74e24b95f7f9f998266c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 14985a16732235e4dabaef4cfc435c68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2221,7 +2235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503514e7a97f02b448bb9f47a9153161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snakeTail: {fileID: 2121324141}
   scaleAmount: 0.01
 --- !u!114 &2121324141
 MonoBehaviour:

@@ -18,12 +18,14 @@ public class StateManager : MonoBehaviour
     {
         switch (incident) 
         {
-            case "EatFood":
+            case "CameraZoom":
                 playerCam.Zoom();
-                Debug.Log(playerCam.ToString());
+                break;
+            case "CameraReZoom":
+                playerCam.ReZoom();
                 break;
             case "Death":
-                              
+               
                 break;
             case "foodGenerated":
                 
