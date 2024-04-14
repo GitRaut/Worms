@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class RandomSize : Bonus
 {
-    [Range(0, 5)] private int maxValue;
+    [Range(0, 5)] 
+    [SerializeField] private int maxValue;
 
     protected override void DoAction(GameObject obj)
     {

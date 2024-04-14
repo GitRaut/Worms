@@ -11,8 +11,6 @@ public enum BonusType
 
 public class Bonus : MonoBehaviour
 {
-    [SerializeField] protected int influence; //in procentage
-    [SerializeField] protected float existTime; //existing time
     [SerializeField] protected BonusType type;
 
     public BonusType bonusType 
