@@ -8,7 +8,7 @@ public class ZoomBoost : Bonus
     [SerializeField] private float time;
     [SerializeField] private int boostSize;
 
-    protected override void DoAction(GameObject obj) => DoBoost();
+    protected override void DoAction(GameObject obj) => StartCoroutine(DoBoost());
 
     private IEnumerator DoBoost()
     {
