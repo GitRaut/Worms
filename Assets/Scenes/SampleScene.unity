@@ -1147,6 +1147,7 @@ GameObject:
   - component: {fileID: 1223447392}
   - component: {fileID: 1223447391}
   - component: {fileID: 1223447390}
+  - component: {fileID: 1223447394}
   m_Layer: 0
   m_Name: ScriptHandler
   m_TagString: Untagged
@@ -1183,7 +1184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 50
-  density: 10000
+  density: 1000
   fieldColor: {r: 1, g: 0, b: 0, a: 0}
   foodContainer: {fileID: 2041639572}
   foodPrefabs:
@@ -1235,6 +1236,28 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &1223447394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223447388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1907ebbaed2314c94919fb97fe273f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 50
+  density: 50
+  fieldColor: {r: 0, g: 0, b: 0, a: 0}
+  foodContainer: {fileID: 2041639572}
+  foodPrefabs:
+  - {fileID: 7389914009728504938, guid: 89b2a4a630351b444b370e3c093fe963, type: 3}
+  - {fileID: 2317241428799530246, guid: c6847a0bbe948c74db4c56f6a44fe776, type: 3}
+  - {fileID: 2935269646260631660, guid: 72912011f30899c4c8f67f88bbb19108, type: 3}
+  - {fileID: 8667061352672546726, guid: 9dada38fe468ed6478b2bc7e445760fe, type: 3}
+  breakTime: 60
 --- !u!1 &1363955123
 GameObject:
   m_ObjectHideFlags: 0
