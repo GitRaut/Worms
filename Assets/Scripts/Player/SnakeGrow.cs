@@ -19,15 +19,6 @@ public class SnakeGrow : MonoBehaviour
         moveScript = GetComponent<Move>();
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Food"))
-        {
-            other.gameObject.GetComponent<NetworkObject>().Despawn();
-            Grow();
-        }
-    }
-
     public void Grow(int sizeBoost = 1)
     {
         if (!isBoosted) curBoost = sizeBoost;

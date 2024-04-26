@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 
 public class RandomSize : Bonus
@@ -11,5 +12,6 @@ public class RandomSize : Bonus
         
         int addSize = Random.Range(0, maxValue);
         snake.Grow(addSize);
+        gameObject.GetComponent<NetworkObject>().Despawn();
     }
 }

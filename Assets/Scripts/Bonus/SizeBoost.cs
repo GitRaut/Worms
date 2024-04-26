@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 public class SizeBoost : Bonus
@@ -20,5 +21,6 @@ public class SizeBoost : Bonus
         snake.Boost(boostSize);
         yield return new WaitForSeconds(time);
         snake.ReBoost(boostSize);
+        gameObject.GetComponent<NetworkObject>().Despawn();
     }
 }

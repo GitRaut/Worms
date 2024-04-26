@@ -22,8 +22,8 @@ public class Bonus : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
         DoAction(collision.gameObject);
-        //GetComponent<NetworkObject>().Despawn();
     }
 
     protected virtual void DoAction(GameObject obj) { }

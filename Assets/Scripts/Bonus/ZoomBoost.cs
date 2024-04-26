@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 public class ZoomBoost : Bonus
@@ -8,12 +9,17 @@ public class ZoomBoost : Bonus
     [SerializeField] private float time;
     [SerializeField] private int boostSize;
 
-    protected override void DoAction(GameObject obj) => StartCoroutine(DoBoost());
+    protected override void DoAction(GameObject obj)
+    {
+        gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        StartCoroutine(DoBoost());
+    }
 
     private IEnumerator DoBoost()
     {
         for (int i = 0; i < boostSize; i++) { EventManager.CallState("CameraZoom"); }
         yield return new WaitForSeconds(time);
         for (int i = 0; i < boostSize; i++) { EventManager.CallState("CameraReZoom"); }
+        gameObject.GetComponent<NetworkObject>().Despawn();
     }
 }

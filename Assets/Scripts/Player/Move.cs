@@ -24,9 +24,9 @@ public class Move : NetworkBehaviour
 
     private void FixedUpdate()
     {
-        if (!IsOwner) return;
+        if (!IsOwner || !Application.isFocused) return;
 
-        if(isBoosted || Input.GetKeyDown(KeyCode.Space)) curSpeed = boostedSpeed;
+        if(isBoosted || Input.GetKey(KeyCode.Space)) curSpeed = boostedSpeed;
         else if (!isBoosted || Input.GetKeyUp(KeyCode.Space)) curSpeed = speed;
 
         mouseInput = Input.mousePosition;
