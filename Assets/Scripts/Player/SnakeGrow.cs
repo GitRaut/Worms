@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 
 [RequireComponent(typeof(SnakeTail))]
@@ -22,7 +23,7 @@ public class SnakeGrow : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Food"))
         {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<NetworkObject>().Despawn();
             Grow();
         }
     }

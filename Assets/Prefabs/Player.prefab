@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6969039184040227081}
   - component: {fileID: 6189990030103602840}
   - component: {fileID: 3703926399337866419}
+  - component: {fileID: 7395405664284057809}
+  - component: {fileID: 7452511638008806692}
   m_Layer: 0
   m_Name: SnakeTrailGfx
   m_TagString: Untagged
@@ -98,6 +100,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &7395405664284057809
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262530242754559608}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.79
+--- !u!114 &7452511638008806692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262530242754559608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6fc6accc3ce5b43b016f3eec8435d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5505038988754181439
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +247,6 @@ GameObject:
   - component: {fileID: 2537547336141074407}
   - component: {fileID: 408193054063045983}
   - component: {fileID: 1870701489477670809}
-  - component: {fileID: 3884640242855579407}
   - component: {fileID: 6043744823342514643}
   - component: {fileID: 5179939016204469315}
   m_Layer: 0
@@ -260,8 +308,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 8749518650730234366}
   speed: 0.1
-  zoomScale: 10
-  zoomSpeed: 0.001
 --- !u!114 &1383580553609813238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,41 +415,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.54
---- !u!58 &3884640242855579407
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975070792245087266}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &6043744823342514643
 MonoBehaviour:
   m_ObjectHideFlags: 0

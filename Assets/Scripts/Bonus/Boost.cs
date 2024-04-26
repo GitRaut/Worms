@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class Boost : Bonus
 {
-    [Range(0f, 5f)] private float time;
+    [Range(0f, 5f)]
+    [SerializeField] private float time;
 
     protected override void DoAction(GameObject obj)
     {

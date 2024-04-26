@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 
 public class DeathOnWallCollision : MonoBehaviour
@@ -6,8 +7,8 @@ public class DeathOnWallCollision : MonoBehaviour
     {
         if (other.CompareTag("Snake"))
         {
-            Destroy(other.gameObject);
-            Debug.Log("Игрок умер от столкновения со стеной");
+            other.gameObject.GetComponent<NetworkObject>().Despawn();
+            Debug.Log("Игрок умер от столкновения");
         }
     }
 }

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class FoodGenerator : MonoBehaviour
+public class FoodGenerator : NetworkBehaviour
 {
     [Header("Field")]
     [SerializeField] private float radius; //radius of generate zone
@@ -11,12 +12,19 @@ public class FoodGenerator : MonoBehaviour
     [SerializeField] private Transform foodContainer; //transform with all food
 
     [Header("Food")]
-    [SerializeField] private List<GameObject> foodPrefabs; 
+    [SerializeField] private List<GameObject> foodPrefabs;
     [SerializeField] private float breakTime; //time between generations
 
     private List<GameObject> createdFood = new List<GameObject>(); //list with all generated food
 
-    private void Start() => StartCoroutine(GenerateFood());
+    private void Start() => NetworkManager.Singleton.OnServerStarted += StartSpawn;
+
+    private void StartSpawn()
+    {
+        if (!IsServer || !IsHost) return;
+        NetworkManager.Singleton.OnServerStarted -= StartSpawn;
+        StartCoroutine(GenerateFood());
+    }
 
     private IEnumerator GenerateFood()
     {
@@ -27,6 +35,8 @@ public class FoodGenerator : MonoBehaviour
             Vector3 pos = Random.insideUnitCircle * radius;
             GameObject foodPref = foodPrefabs[Random.Range(0, foodPrefabs.Count)];
             GameObject food = Instantiate(foodPref, pos, Quaternion.identity, foodContainer);
+            var foodNetwork = food.GetComponent<NetworkObject>();
+            foodNetwork.Spawn();
         }
 
         StartCoroutine(GenerateFood());

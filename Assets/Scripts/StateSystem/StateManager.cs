@@ -1,10 +1,11 @@
 using System;
+using Unity.Netcode;
 using UnityEngine;
 
 
-public class StateManager : MonoBehaviour
+public class StateManager : NetworkBehaviour
 {
-    private CameraFollow playerCam;
+    private CameraZoom playerCam;
 
     private void Awake()
     {
@@ -12,7 +13,9 @@ public class StateManager : MonoBehaviour
         EventManager.eventOnStateUpdate += CheckIncident;
     }
 
-    private void Start() => playerCam = Camera.main.GetComponent<CameraFollow>();
+    public override void OnNetworkSpawn() => Init();
+
+    private void Init() => playerCam = Camera.main.GetComponent<CameraZoom>();
 
     private void CheckIncident(string incident)
     {
