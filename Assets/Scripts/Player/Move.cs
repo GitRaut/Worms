@@ -4,7 +4,7 @@ using UnityEngine;
 public class Move : NetworkBehaviour
 {
     [SerializeField] private float speed = 3f;
-    [SerializeField] private float boostedSpeed = 6f; // Double speed
+    [SerializeField] private float boostedSpeed = 100f; // Double speed
 
     private Vector3 direction;
     private float curSpeed;

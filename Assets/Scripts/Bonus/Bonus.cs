@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 
 public enum BonusType
@@ -19,7 +20,11 @@ public class Bonus : MonoBehaviour
         private set { type = value; }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) => DoAction(collision.gameObject);
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        DoAction(collision.gameObject);
+        //GetComponent<NetworkObject>().Despawn();
+    }
 
     protected virtual void DoAction(GameObject obj) { }
 }

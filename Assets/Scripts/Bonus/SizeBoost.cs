@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SizeBoost : Bonus
 {
-    [Range(0f, 5f)]
+    [Range(0f, 20f)]
     [SerializeField] private float time;
     [SerializeField] private int boostSize;
 
