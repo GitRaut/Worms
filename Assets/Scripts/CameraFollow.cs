@@ -1,6 +1,7 @@
+using Unity.Netcode;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class CameraFollow : NetworkBehaviour
 {
     [Header("FollowSettings")]
     [SerializeField] private Transform target;
@@ -15,19 +16,21 @@ public class CameraFollow : MonoBehaviour
     private Vector3 targetPos;
     private Vector3 change;
 
-    private void Start() => mainCam = Camera.main;
+    public override void OnNetworkSpawn() => Init();
+
+    private void Init() => mainCam = Camera.main;
 
     private void FixedUpdate()
     {
-        if (!target) return;
+        if (!IsOwner || !target) return;
 
         Move();
     }
 
     private void Move()
     {
-        targetPos = new Vector3(target.position.x, target.position.y, transform.position.z);
-        transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref change, speed);
+        targetPos = new Vector3(target.position.x, target.position.y, mainCam.transform.position.z);
+        mainCam.transform.position = Vector3.SmoothDamp(mainCam.transform.position, targetPos, ref change, speed);
     }
 
     public void Zoom() => mainCam.orthographicSize = Mathf.Lerp(mainCam.orthographicSize, mainCam.orthographicSize + zoomScale, zoomSpeed);

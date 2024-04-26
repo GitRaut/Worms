@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 [RequireComponent(typeof(SnakeTail))]
@@ -34,7 +33,7 @@ public class SnakeGrow : MonoBehaviour
 
         for (int i = 0; i < curBoost; i++)
         {
-            snakeTail.AddTail();
+            snakeTail.AddLength();
             transform.localScale += Vector3.one * scaleAmount;
 
             if (transform.CompareTag("Snake"))
