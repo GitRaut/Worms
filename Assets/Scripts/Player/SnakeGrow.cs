@@ -3,7 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(SnakeTail))]
 [RequireComponent(typeof(Move))]
-public class SnakeGrow : MonoBehaviour
+public class SnakeGrow : NetworkBehaviour
 {
     [SerializeField] private float scaleAmount; // additive scale to current scale of snake elements
 
@@ -28,8 +28,7 @@ public class SnakeGrow : MonoBehaviour
             snakeTail.AddLength();
             transform.localScale += Vector3.one * scaleAmount;
 
-            if (transform.CompareTag("Snake"))
-                EventManager.CallState("CameraZoom");
+            if (IsOwner) EventManager.CallState("CameraZoom");
         }
     }
 
