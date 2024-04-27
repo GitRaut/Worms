@@ -21,7 +21,6 @@ public class FoodGenerator : NetworkBehaviour
 
     private void StartSpawn()
     {
-        if (!IsServer || !IsHost) return;
         NetworkManager.Singleton.OnServerStarted -= StartSpawn;
         StartCoroutine(GenerateFood());
     }
@@ -36,7 +35,7 @@ public class FoodGenerator : NetworkBehaviour
             GameObject foodPref = foodPrefabs[Random.Range(0, foodPrefabs.Count)];
             GameObject food = Instantiate(foodPref, pos, Quaternion.identity, foodContainer);
             var foodNetwork = food.GetComponent<NetworkObject>();
-            foodNetwork.Spawn();
+            foodNetwork.Spawn(true);
         }
 
         StartCoroutine(GenerateFood());

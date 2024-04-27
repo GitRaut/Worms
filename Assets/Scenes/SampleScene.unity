@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 50
-  density: 50
+  density: 20
   fieldColor: {r: 0, g: 0, b: 0, a: 0}
   foodContainer: {fileID: 2041639572}
   foodPrefabs:
